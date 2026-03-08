@@ -1,14 +1,13 @@
 // ========== CAROUSEL ==========
-const track = document.getElementById('carouselTrack');
-const slides = track.querySelectorAll('.carousel-slide');
-const prevBtn = document.getElementById('carouselPrev');
-const nextBtn = document.getElementById('carouselNext');
+const imagesTrack = document.getElementById('carouselTrack');
+const imageSlides = imagesTrack.querySelectorAll('.carousel-image-slide');
+const captions = document.querySelectorAll('.carousel-text-panel .slide-caption');
 const dotsContainer = document.getElementById('carouselDots');
 let currentSlide = 0;
 let autoplayTimeout;
 
 // Create dots
-slides.forEach((_, i) => {
+imageSlides.forEach((_, i) => {
   const dot = document.createElement('button');
   dot.classList.add('carousel-dot');
   dot.setAttribute('aria-label', `Ir a slide ${i + 1}`);
@@ -19,20 +18,21 @@ slides.forEach((_, i) => {
 
 const dots = dotsContainer.querySelectorAll('.carousel-dot');
 
-// Get duration for current slide from data-duration attribute
 function getSlideDuration(index) {
-  const slide = slides[index];
-  return parseInt(slide.getAttribute('data-duration')) || 5000;
+  return parseInt(imageSlides[index].getAttribute('data-duration')) || 5000;
 }
 
 function goToSlide(index) {
-  slides[currentSlide].classList.remove('active');
+  imageSlides[currentSlide].classList.remove('active');
+  captions[currentSlide].classList.remove('active');
   dots[currentSlide].classList.remove('active');
 
-  currentSlide = (index + slides.length) % slides.length;
+  currentSlide = (index + imageSlides.length) % imageSlides.length;
 
-  track.style.transform = `translateX(-${currentSlide * 100}%)`;
-  slides[currentSlide].classList.add('active');
+  // Only images slide; captions fade via CSS
+  imagesTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
+  imageSlides[currentSlide].classList.add('active');
+  captions[currentSlide].classList.add('active');
   dots[currentSlide].classList.add('active');
 
   resetAutoplay();
@@ -46,8 +46,13 @@ function prevSlide() {
   goToSlide(currentSlide - 1);
 }
 
-prevBtn.addEventListener('click', prevSlide);
-nextBtn.addEventListener('click', nextSlide);
+// Event delegation for prev/next buttons
+document.querySelector('.carousel').addEventListener('click', (e) => {
+  const btn = e.target.closest('.carousel-btn');
+  if (!btn) return;
+  if (btn.classList.contains('carousel-btn-prev')) prevSlide();
+  if (btn.classList.contains('carousel-btn-next')) nextSlide();
+});
 
 // Autoplay with variable timing per slide
 function startAutoplay() {
@@ -60,8 +65,7 @@ function resetAutoplay() {
   startAutoplay();
 }
 
-// Initialize first slide
-slides[0].classList.add('active');
+// Initialize
 startAutoplay();
 
 // Pause on hover
@@ -185,8 +189,9 @@ initScrollAnimations();
 
 // ========== CONTACT FORM ==========
 const contactForm = document.getElementById('contactForm');
+const submitBtn = contactForm.querySelector('.btn-submit');
 
-contactForm.addEventListener('submit', (e) => {
+contactForm.addEventListener('submit', async (e) => {
   e.preventDefault();
 
   const formData = new FormData(contactForm);
@@ -196,13 +201,31 @@ contactForm.addEventListener('submit', (e) => {
     return;
   }
 
-  contactForm.innerHTML = `
-    <div class="form-success">
-      <div class="success-icon">
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+  // Deshabilitar botón mientras envía
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Enviando...';
+
+  try {
+    const response = await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    });
+
+    if (!response.ok) throw new Error('Error al enviar');
+
+    contactForm.innerHTML = `
+      <div class="form-success">
+        <div class="success-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <h3>Mensaje enviado</h3>
+        <p>Gracias por contactarnos, ${data.nombre}. Un asesor se comunicará contigo a la brevedad.</p>
       </div>
-      <h3>Mensaje enviado</h3>
-      <p>Gracias por contactarnos, ${data.nombre}. Un asesor se comunicará contigo a la brevedad.</p>
-    </div>
-  `;
+    `;
+  } catch (error) {
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Quiero que me contacten';
+    alert('Hubo un error al enviar tu mensaje. Por favor intenta de nuevo o llámanos al 664 630 1792.');
+  }
 });

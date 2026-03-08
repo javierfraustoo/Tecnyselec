@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tecnyselec Estacionamientos | Soluciones en Equipos de Estacionamiento</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=4">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -31,73 +31,64 @@
 
   <!-- ========== HERO / INICIO ========== -->
   <section class="hero" id="inicio">
-    <div class="carousel">
-      <div class="carousel-track" id="carouselTrack">
+    <div class="carousel-container">
+      <div class="carousel">
+        <!-- LEFT: Image sliding panel -->
+        <div class="carousel-images-panel">
+          <div class="carousel-images-track" id="carouselTrack">
+            <div class="carousel-image-slide active" data-duration="8000">
+              <img src="https://images.unsplash.com/photo-1506521781263-d8422e82f27a?w=900&q=80" alt="Estacionamiento" class="slide-img">
+            </div>
+            <div class="carousel-image-slide" data-duration="8000">
+              <img src="https://images.unsplash.com/photo-1573348722427-f1d6819fdf98?w=900&q=80" alt="Centros comerciales" class="slide-img">
+            </div>
+            <div class="carousel-image-slide" data-duration="8000">
+              <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=900&q=80" alt="Mantenimiento" class="slide-img">
+            </div>
+            <div class="carousel-image-slide" data-duration="8000">
+              <img src="https://images.unsplash.com/photo-1558002038-1055907df827?w=900&q=80" alt="Tecnología" class="slide-img">
+            </div>
+            <div class="carousel-image-slide" data-duration="8000">
+              <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=900&q=80" alt="Consultoría" class="slide-img">
+            </div>
+          </div>
+          <button class="carousel-btn carousel-btn-prev" aria-label="Anterior">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <button class="carousel-btn carousel-btn-next" aria-label="Siguiente">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+        </div>
 
-        <!-- SLIDE 1 - 8 segundos -->
-        <div class="carousel-slide" data-duration="8000">
-          <div class="slide-image" style="background-image: url('https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=1200&q=80')"></div>
-          <div class="slide-overlay"></div>
-          <div class="slide-caption">
+        <!-- RIGHT: Text fade panel -->
+        <div class="carousel-text-panel">
+          <div class="slide-caption active" data-slide="0">
             <h2>Más de dos décadas integrando soluciones de estacionamiento.</h2>
             <p>Somos una empresa con 26 años de trayectoria especializada en la venta, instalación y mantenimiento de sistemas de estacionamiento en la región fronteriza. Integramos tecnología de punta con un servicio técnico inigualable para garantizar el flujo y la seguridad de tus instalaciones.</p>
             <a href="#inicio" class="btn btn-accent slide-btn">Conoce nuestra historia</a>
           </div>
-        </div>
-
-        <!-- SLIDE 2 - 5 segundos -->
-        <div class="carousel-slide" data-duration="8000">
-          <div class="slide-image" style="background-image: url('https://images.unsplash.com/photo-1573348722427-f1d6819fdf98?w=1200&q=80')"></div>
-          <div class="slide-overlay"></div>
-          <div class="slide-caption">
+          <div class="slide-caption" data-slide="1">
             <h2>La confianza de los centros comerciales más grandes.</h2>
             <p>Trabajamos de la mano con las plazas y desarrollos más importantes de la región, como Plaza Río y Península Fashion Mall. Nos caracterizamos por brindar soluciones robustas que soportan el tráfico pesado diario, asegurando la mejor experiencia para el usuario final.</p>
             <a href="#clientes" class="btn btn-accent slide-btn">Nuestros Clientes</a>
           </div>
-        </div>
-
-        <!-- SLIDE 3 - 5 segundos -->
-        <div class="carousel-slide" data-duration="8000">
-          <div class="slide-image" style="background-image: url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=1200&q=80')"></div>
-          <div class="slide-overlay"></div>
-          <div class="slide-caption">
+          <div class="slide-caption" data-slide="2">
             <h2>Tu estacionamiento nunca se detiene.</h2>
             <p>Protegemos tu inversión con pólizas de mantenimiento preventivo y correctivo. Nuestro equipo técnico experto ofrece tiempos de respuesta inmediatos para que tus sistemas de cobro, plumas y cámaras operen al 100% de su capacidad todos los días del año.</p>
             <a href="#servicios" class="btn btn-accent slide-btn">Explora nuestros servicios</a>
           </div>
-        </div>
-
-        <!-- SLIDE 4 - 5 segundos -->
-        <div class="carousel-slide" data-duration="8000">
-          <div class="slide-image" style="background-image: url('https://images.unsplash.com/photo-1558002038-1055907df827?w=1200&q=80')"></div>
-          <div class="slide-overlay"></div>
-          <div class="slide-caption">
+          <div class="slide-caption" data-slide="3">
             <h2>Tecnología y equipamiento de primer nivel.</h2>
             <p>Proveemos e instalamos los mejores equipos del mercado: barreras vehiculares, sistemas de cobro automatizado, cámaras de seguridad y postes de protección. Además, somos tu proveedor confiable de consumibles, boletos y rollos térmicos.</p>
             <a href="#servicios" class="btn btn-accent slide-btn">Ver nuestros productos</a>
           </div>
-        </div>
-
-        <!-- SLIDE 5 - 5 segundos -->
-        <div class="carousel-slide" data-duration="8000">
-          <div class="slide-image" style="background-image: url('https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=1200&q=80')"></div>
-          <div class="slide-overlay"></div>
-          <div class="slide-caption">
+          <div class="slide-caption" data-slide="4">
             <h2>Diseñamos la solución exacta para tu proyecto.</h2>
             <p>¿Planeas abrir o remodelar un estacionamiento? Te llevamos de la mano desde la consultoría inicial, el diseño del cableado y la instalación, hasta la puesta en marcha operativa. Tu proyecto está seguro con los verdaderos expertos del sector.</p>
             <a href="#contacto" class="btn btn-accent slide-btn">Cotiza tu proyecto hoy</a>
           </div>
         </div>
-
       </div>
-
-      <!-- Carousel controls -->
-      <button class="carousel-btn carousel-btn-prev" id="carouselPrev" aria-label="Anterior">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
-      </button>
-      <button class="carousel-btn carousel-btn-next" id="carouselNext" aria-label="Siguiente">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-      </button>
 
       <!-- Dots -->
       <div class="carousel-dots" id="carouselDots"></div>
@@ -116,17 +107,15 @@
 
         <div class="card">
           <div class="card-image">
-            <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=600&q=80" alt="Equipamiento de Estacionamiento">
+            <img src="https://images.unsplash.com/photo-1506521781263-d8422e82f27a?w=600&q=80" alt="Equipamiento de Estacionamiento">
             <div class="card-image-overlay"></div>
+          </div>
+          <div class="card-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2h-1"/><path d="M6 21a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/><path d="M17 21a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/><path d="M1 16h14"/></svg>
           </div>
           <div class="card-body">
             <h3 class="card-title">Equipamiento de Estacionamiento Automatizado</h3>
-            <ul class="card-features">
-              <li>Sistemas adaptados a las necesidades de cada proyecto</li>
-              <li>Opciones para todo tipo de presupuesto y escala</li>
-              <li>Asesoría personalizada en la selección del equipo ideal</li>
-              <li>Instalación profesional llave en mano</li>
-            </ul>
+            <p class="card-description">Instalación profesional llave en mano de sistemas de cobro automatizado, adaptados a cada proyecto y presupuesto.</p>
             <a href="#contacto" class="btn btn-primary">Me Interesa</a>
           </div>
         </div>
@@ -136,14 +125,12 @@
             <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=600&q=80" alt="Mantenimiento Preventivo y Correctivo">
             <div class="card-image-overlay"></div>
           </div>
+          <div class="card-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          </div>
           <div class="card-body">
             <h3 class="card-title">Mantenimiento Preventivo y Correctivo</h3>
-            <ul class="card-features">
-              <li>Pólizas de servicio para equipos de cobro instalados</li>
-              <li>Diagnóstico y reparación de fallas en campo</li>
-              <li>Técnicos certificados con respuesta inmediata</li>
-              <li>Mantenimiento programado para máxima vida útil</li>
-            </ul>
+            <p class="card-description">Pólizas de servicio con técnicos certificados y respuesta inmediata para mantener tus equipos operando al 100%.</p>
             <a href="#contacto" class="btn btn-primary">Me Interesa</a>
           </div>
         </div>
@@ -153,14 +140,12 @@
             <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&q=80" alt="Boletos y Rollos Térmicos">
             <div class="card-image-overlay"></div>
           </div>
+          <div class="card-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M13 5v2"/><path d="M13 17v2"/><path d="M13 11v2"/></svg>
+          </div>
           <div class="card-body">
             <h3 class="card-title">Suministro de Boletos y Rollos Térmicos</h3>
-            <ul class="card-features">
-              <li>Boletos de cartón para todas las marcas de equipos</li>
-              <li>Rollos térmicos para sistemas de cobro</li>
-              <li>Compatibilidad garantizada con tu sistema actual</li>
-              <li>Entregas programadas para que nunca te quedes sin stock</li>
-            </ul>
+            <p class="card-description">Boletos y rollos térmicos compatibles con todas las marcas, con entregas programadas para que nunca te quedes sin stock.</p>
             <a href="#contacto" class="btn btn-primary">Me Interesa</a>
           </div>
         </div>
@@ -170,14 +155,12 @@
             <img src="https://images.unsplash.com/photo-1558002038-1055907df827?w=600&q=80" alt="Barreras Vehiculares">
             <div class="card-image-overlay"></div>
           </div>
+          <div class="card-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V4"/><path d="M4 12h16"/><path d="M20 8v8"/><circle cx="4" cy="4" r="2"/></svg>
+          </div>
           <div class="card-body">
             <h3 class="card-title">Barreras Vehiculares para Control de Acceso</h3>
-            <ul class="card-features">
-              <li>Soluciones de control de acceso sencillo y eficiente</li>
-              <li>Ideales para proyectos pequeños o de presupuesto ajustado</li>
-              <li>Instalación rápida y confiable</li>
-              <li>Opciones manuales, semiautomáticas y automáticas</li>
-            </ul>
+            <p class="card-description">Soluciones de acceso manuales, semiautomáticas y automáticas con instalación rápida y confiable para todo presupuesto.</p>
             <a href="#contacto" class="btn btn-primary">Me Interesa</a>
           </div>
         </div>
@@ -187,14 +170,12 @@
             <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80" alt="Operación de Estacionamientos">
             <div class="card-image-overlay"></div>
           </div>
+          <div class="card-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
           <div class="card-body">
             <h3 class="card-title">Operación de Estacionamientos</h3>
-            <ul class="card-features">
-              <li>Gestión integral de estacionamientos de plazas comerciales</li>
-              <li>Ahorro y eficiencia en recursos administrativos</li>
-              <li>Personal capacitado y supervisado</li>
-              <li>Reportes operativos y financieros periódicos</li>
-            </ul>
+            <p class="card-description">Gestión integral de estacionamientos con personal capacitado, reportes operativos y financieros periódicos.</p>
             <a href="#contacto" class="btn btn-primary">Me Interesa</a>
           </div>
         </div>
@@ -204,14 +185,12 @@
             <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=600&q=80" alt="Soluciones Integrales">
             <div class="card-image-overlay"></div>
           </div>
+          <div class="card-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          </div>
           <div class="card-body">
             <h3 class="card-title">Soluciones Integrales de Estacionamiento</h3>
-            <ul class="card-features">
-              <li>Proyectos a la medida para hospitales y residenciales</li>
-              <li>Estacionamientos públicos y corporativos</li>
-              <li>Consultoría, diseño, instalación y puesta en marcha</li>
-              <li>Soporte continuo post-instalación</li>
-            </ul>
+            <p class="card-description">Consultoría, diseño, instalación y puesta en marcha para hospitales, residenciales y estacionamientos corporativos.</p>
             <a href="#contacto" class="btn btn-primary">Me Interesa</a>
           </div>
         </div>
@@ -221,14 +200,12 @@
             <img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=600&q=80" alt="Sistemas de CCTV">
             <div class="card-image-overlay"></div>
           </div>
+          <div class="card-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+          </div>
           <div class="card-body">
             <h3 class="card-title">Instalación de Sistemas de CCTV</h3>
-            <ul class="card-features">
-              <li>Videovigilancia para todo tipo de inmuebles</li>
-              <li>Cámaras de alta definición con visión nocturna</li>
-              <li>Monitoreo remoto desde cualquier dispositivo</li>
-              <li>Almacenamiento en la nube y grabación continua</li>
-            </ul>
+            <p class="card-description">Videovigilancia HD con visión nocturna, monitoreo remoto y almacenamiento en la nube para todo tipo de inmuebles.</p>
             <a href="#contacto" class="btn btn-primary">Me Interesa</a>
           </div>
         </div>
@@ -238,14 +215,12 @@
             <img src="https://images.unsplash.com/photo-1590674899484-d5640e854abe?w=600&q=80" alt="Obra Civil Vial">
             <div class="card-image-overlay"></div>
           </div>
+          <div class="card-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 22 22 22"/><line x1="12" y1="9" x2="12" y2="14"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          </div>
           <div class="card-body">
             <h3 class="card-title">Obra Civil para Flujo Vial</h3>
-            <ul class="card-features">
-              <li>Topes, guarniciones y bolardos de protección</li>
-              <li>Ponchallantas y reductores de velocidad</li>
-              <li>Señalización vial y pintura de cajones</li>
-              <li>Diseño de circulación vehicular en estacionamientos</li>
-            </ul>
+            <p class="card-description">Topes, bolardos, señalización vial, pintura de cajones y diseño de circulación vehicular en estacionamientos.</p>
             <a href="#contacto" class="btn btn-primary">Me Interesa</a>
           </div>
         </div>
@@ -255,14 +230,12 @@
             <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&q=80" alt="Asesoría y Gestoría">
             <div class="card-image-overlay"></div>
           </div>
+          <div class="card-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          </div>
           <div class="card-body">
             <h3 class="card-title">Asesoría y Gestoría de Trámites</h3>
-            <ul class="card-features">
-              <li>Permisos municipales y licencias de operación</li>
-              <li>Trámites ambientales y de protección civil</li>
-              <li>Gestión ante PROFECO y autoridades de tránsito</li>
-              <li>Acompañamiento integral en el proceso regulatorio</li>
-            </ul>
+            <p class="card-description">Gestión de permisos municipales, licencias de operación, trámites ambientales y regulatorios ante autoridades.</p>
             <a href="#contacto" class="btn btn-primary">Me Interesa</a>
           </div>
         </div>
@@ -272,14 +245,12 @@
             <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=80" alt="Soluciones a la Medida">
             <div class="card-image-overlay"></div>
           </div>
+          <div class="card-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          </div>
           <div class="card-body">
             <h3 class="card-title">Soluciones a la Medida</h3>
-            <ul class="card-features">
-              <li>Proyectos personalizados en estacionamiento y vialidad</li>
-              <li>Control de acceso y vigilancia adaptados a tu operación</li>
-              <li>Flexibilidad para resolver cualquier reto del sector</li>
-              <li>Experiencia multidisciplinaria de 26 años en campo</li>
-            </ul>
+            <p class="card-description">Proyectos personalizados de estacionamiento, acceso y vigilancia con 26 años de experiencia multidisciplinaria.</p>
             <a href="#contacto" class="btn btn-primary">Me Interesa</a>
           </div>
         </div>
@@ -299,6 +270,9 @@
       <div class="cards-grid clients-grid">
 
         <div class="card card-client">
+          <div class="card-icon card-icon-location">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
           <div class="card-image">
             <img src="https://images.unsplash.com/photo-1519567241046-7f570eee3ce6?w=600&q=80" alt="Plaza Río">
             <div class="card-image-overlay"></div>
@@ -311,6 +285,9 @@
         </div>
 
         <div class="card card-client">
+          <div class="card-icon card-icon-location">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
           <div class="card-image">
             <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80" alt="Península Fashion Mall">
             <div class="card-image-overlay"></div>
@@ -323,6 +300,9 @@
         </div>
 
         <div class="card card-client">
+          <div class="card-icon card-icon-location">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
           <div class="card-image">
             <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&q=80" alt="Macroplaza Insurgentes">
             <div class="card-image-overlay"></div>
@@ -335,6 +315,9 @@
         </div>
 
         <div class="card card-client">
+          <div class="card-icon card-icon-location">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
           <div class="card-image">
             <img src="https://images.unsplash.com/photo-1529074963764-98f45c47344b?w=600&q=80" alt="Aeropuerto Internacional de Tijuana">
             <div class="card-image-overlay"></div>
@@ -347,6 +330,9 @@
         </div>
 
         <div class="card card-client">
+          <div class="card-icon card-icon-location">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
           <div class="card-image">
             <img src="https://images.unsplash.com/photo-1568992687947-868a62a9f521?w=600&q=80" alt="Alameda Otay">
             <div class="card-image-overlay"></div>
@@ -359,6 +345,9 @@
         </div>
 
         <div class="card card-client">
+          <div class="card-icon card-icon-location">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
           <div class="card-image">
             <img src="https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=600&q=80" alt="Paseo 2000">
             <div class="card-image-overlay"></div>
@@ -371,6 +360,9 @@
         </div>
 
         <div class="card card-client">
+          <div class="card-icon card-icon-location">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
           <div class="card-image">
             <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&q=80" alt="Plaza Carrousel">
             <div class="card-image-overlay"></div>
@@ -383,6 +375,9 @@
         </div>
 
         <div class="card card-client">
+          <div class="card-icon card-icon-location">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
           <div class="card-image">
             <img src="https://images.unsplash.com/photo-1577495508048-b635879837f1?w=600&q=80" alt="Pabellón Rosarito">
             <div class="card-image-overlay"></div>
@@ -395,6 +390,9 @@
         </div>
 
         <div class="card card-client">
+          <div class="card-icon card-icon-location">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
           <div class="card-image">
             <img src="https://images.unsplash.com/photo-1573348722427-f1d6819fdf98?w=600&q=80" alt="Plaza Pacífico">
             <div class="card-image-overlay"></div>
@@ -406,20 +404,11 @@
           </div>
         </div>
 
-        <div class="card card-client">
-          <div class="card-image">
-            <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=600&q=80" alt="Plaza San Pedro">
-            <div class="card-image-overlay"></div>
-          </div>
-          <div class="card-body">
-            <h3 class="card-title">Plaza San Pedro</h3>
-            <p class="card-description">Centro comercial de Mexicali con equipo de estacionamiento de alta capacidad.</p>
-            <a href="#mapa" class="btn btn-outline">Ver Más</a>
-          </div>
-        </div>
+      </div>
 
-        <!-- Card CTA: Ver todos en mapa -->
-        <a href="#mapa" class="card card-client card-cta">
+      <!-- CTA card: separate from grid -->
+      <div class="clients-cta-wrapper">
+        <a href="#mapa" class="card card-cta">
           <div class="card-cta-content">
             <div class="card-cta-icon">
               <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
@@ -429,7 +418,6 @@
             <span class="btn btn-outline">Ver Mapa</span>
           </div>
         </a>
-
       </div>
     </div>
   </section>
@@ -445,19 +433,16 @@
       <div class="map-wrapper">
         <a href="https://maps.app.goo.gl/YWkEKDZQKehiGrBs9" target="_blank" rel="noopener noreferrer" class="map-card">
           <div class="map-card-bg">
-            <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?w=1400&q=80" alt="Mapa de ubicaciones">
-            <div class="map-card-overlay"></div>
+            <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?w=1200&q=80" alt="Mapa">
           </div>
+          <div class="map-card-overlay"></div>
           <div class="map-card-content">
             <div class="map-card-icon">
-              <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
             </div>
-            <h3>Explora nuestras ubicaciones en el mapa</h3>
-            <p>Haz clic para ver en Google Maps todas las plazas comerciales, residenciales, hospitales y estacionamientos públicos donde hemos trabajado.</p>
-            <span class="btn btn-accent">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              Abrir Mapa en Google Maps
-            </span>
+            <h3>Explora nuestras ubicaciones</h3>
+            <p>Ve en el mapa interactivo todos los estacionamientos y plazas donde hemos instalado, dado mantenimiento u operado sistemas.</p>
+            <span class="btn btn-accent">Abrir Mapa Interactivo</span>
           </div>
         </a>
       </div>
@@ -565,6 +550,6 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=4"></script>
 </body>
 </html>
