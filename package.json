@@ -1,0 +1,20 @@
+{
+  "name": "tecnyselec-website",
+  "version": "1.0.0",
+  "description": "Sitio web corporativo de Tecnyselec Estacionamientos - Soluciones en equipos de estacionamiento",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": ["estacionamiento", "parking", "tijuana", "tecnyselec"],
+  "author": "Tecnyselec Estacionamientos",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "express": "^4.21.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

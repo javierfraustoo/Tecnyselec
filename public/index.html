@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tecnyselec Estacionamientos | Soluciones en Equipos de Estacionamiento</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="navbar-container">
+      <a href="#inicio" class="navbar-logo">
+        <img src="img/logo.png" alt="Tecnyselec Estacionamientos" class="logo-img">
+      </a>
+      <button class="navbar-toggle" id="navbarToggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="navbar-menu" id="navbarMenu">
+        <li><a href="#inicio" class="navbar-link active">Inicio</a></li>
+        <li><a href="#servicios" class="navbar-link">Servicios</a></li>
+        <li><a href="#clientes" class="navbar-link">Clientes</a></li>
+        <li><a href="#contacto" class="navbar-link">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ========== HERO / INICIO ========== -->
+  <section class="hero" id="inicio">
+    <div class="carousel">
+      <div class="carousel-track" id="carouselTrack">
+
+        <!-- SLIDE 1 - 8 segundos -->
+        <div class="carousel-slide" data-duration="8000">
+          <div class="slide-image" style="background-image: url('https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=1200&q=80')"></div>
+          <div class="slide-overlay"></div>
+          <div class="slide-caption">
+            <h2>Más de dos décadas integrando soluciones de estacionamiento.</h2>
+            <p>Somos una empresa con 26 años de trayectoria especializada en la venta, instalación y mantenimiento de sistemas de estacionamiento en la región fronteriza. Integramos tecnología de punta con un servicio técnico inigualable para garantizar el flujo y la seguridad de tus instalaciones.</p>
+            <a href="#inicio" class="btn btn-accent slide-btn">Conoce nuestra historia</a>
+          </div>
+        </div>
+
+        <!-- SLIDE 2 - 5 segundos -->
+        <div class="carousel-slide" data-duration="8000">
+          <div class="slide-image" style="background-image: url('https://images.unsplash.com/photo-1573348722427-f1d6819fdf98?w=1200&q=80')"></div>
+          <div class="slide-overlay"></div>
+          <div class="slide-caption">
+            <h2>La confianza de los centros comerciales más grandes.</h2>
+            <p>Trabajamos de la mano con las plazas y desarrollos más importantes de la región, como Plaza Río y Península Fashion Mall. Nos caracterizamos por brindar soluciones robustas que soportan el tráfico pesado diario, asegurando la mejor experiencia para el usuario final.</p>
+            <a href="#clientes" class="btn btn-accent slide-btn">Nuestros Clientes</a>
+          </div>
+        </div>
+
+        <!-- SLIDE 3 - 5 segundos -->
+        <div class="carousel-slide" data-duration="8000">
+          <div class="slide-image" style="background-image: url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=1200&q=80')"></div>
+          <div class="slide-overlay"></div>
+          <div class="slide-caption">
+            <h2>Tu estacionamiento nunca se detiene.</h2>
+            <p>Protegemos tu inversión con pólizas de mantenimiento preventivo y correctivo. Nuestro equipo técnico experto ofrece tiempos de respuesta inmediatos para que tus sistemas de cobro, plumas y cámaras operen al 100% de su capacidad todos los días del año.</p>
+            <a href="#servicios" class="btn btn-accent slide-btn">Explora nuestros servicios</a>
+          </div>
+        </div>
+
+        <!-- SLIDE 4 - 5 segundos -->
+        <div class="carousel-slide" data-duration="8000">
+          <div class="slide-image" style="background-image: url('https://images.unsplash.com/photo-1558002038-1055907df827?w=1200&q=80')"></div>
+          <div class="slide-overlay"></div>
+          <div class="slide-caption">
+            <h2>Tecnología y equipamiento de primer nivel.</h2>
+            <p>Proveemos e instalamos los mejores equipos del mercado: barreras vehiculares, sistemas de cobro automatizado, cámaras de seguridad y postes de protección. Además, somos tu proveedor confiable de consumibles, boletos y rollos térmicos.</p>
+            <a href="#servicios" class="btn btn-accent slide-btn">Ver nuestros productos</a>
+          </div>
+        </div>
+
+        <!-- SLIDE 5 - 5 segundos -->
+        <div class="carousel-slide" data-duration="8000">
+          <div class="slide-image" style="background-image: url('https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=1200&q=80')"></div>
+          <div class="slide-overlay"></div>
+          <div class="slide-caption">
+            <h2>Diseñamos la solución exacta para tu proyecto.</h2>
+            <p>¿Planeas abrir o remodelar un estacionamiento? Te llevamos de la mano desde la consultoría inicial, el diseño del cableado y la instalación, hasta la puesta en marcha operativa. Tu proyecto está seguro con los verdaderos expertos del sector.</p>
+            <a href="#contacto" class="btn btn-accent slide-btn">Cotiza tu proyecto hoy</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Carousel controls -->
+      <button class="carousel-btn carousel-btn-prev" id="carouselPrev" aria-label="Anterior">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <button class="carousel-btn carousel-btn-next" id="carouselNext" aria-label="Siguiente">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+
+      <!-- Dots -->
+      <div class="carousel-dots" id="carouselDots"></div>
+    </div>
+  </section>
+
+  <!-- ========== SERVICIOS ========== -->
+  <section class="section section-services" id="servicios">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Nuestros Servicios</h2>
+        <div class="section-divider"></div>
+        <p class="section-subtitle">Soluciones integrales en equipos de estacionamiento para plazas comerciales, residenciales y estacionamientos públicos.</p>
+      </div>
+      <div class="cards-grid services-grid">
+
+        <div class="card">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=600&q=80" alt="Equipamiento de Estacionamiento">
+            <div class="card-image-overlay"></div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Equipamiento de Estacionamiento Automatizado</h3>
+            <ul class="card-features">
+              <li>Sistemas adaptados a las necesidades de cada proyecto</li>
+              <li>Opciones para todo tipo de presupuesto y escala</li>
+              <li>Asesoría personalizada en la selección del equipo ideal</li>
+              <li>Instalación profesional llave en mano</li>
+            </ul>
+            <a href="#contacto" class="btn btn-primary">Me Interesa</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=600&q=80" alt="Mantenimiento Preventivo y Correctivo">
+            <div class="card-image-overlay"></div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Mantenimiento Preventivo y Correctivo</h3>
+            <ul class="card-features">
+              <li>Pólizas de servicio para equipos de cobro instalados</li>
+              <li>Diagnóstico y reparación de fallas en campo</li>
+              <li>Técnicos certificados con respuesta inmediata</li>
+              <li>Mantenimiento programado para máxima vida útil</li>
+            </ul>
+            <a href="#contacto" class="btn btn-primary">Me Interesa</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&q=80" alt="Boletos y Rollos Térmicos">
+            <div class="card-image-overlay"></div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Suministro de Boletos y Rollos Térmicos</h3>
+            <ul class="card-features">
+              <li>Boletos de cartón para todas las marcas de equipos</li>
+              <li>Rollos térmicos para sistemas de cobro</li>
+              <li>Compatibilidad garantizada con tu sistema actual</li>
+              <li>Entregas programadas para que nunca te quedes sin stock</li>
+            </ul>
+            <a href="#contacto" class="btn btn-primary">Me Interesa</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1558002038-1055907df827?w=600&q=80" alt="Barreras Vehiculares">
+            <div class="card-image-overlay"></div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Barreras Vehiculares para Control de Acceso</h3>
+            <ul class="card-features">
+              <li>Soluciones de control de acceso sencillo y eficiente</li>
+              <li>Ideales para proyectos pequeños o de presupuesto ajustado</li>
+              <li>Instalación rápida y confiable</li>
+              <li>Opciones manuales, semiautomáticas y automáticas</li>
+            </ul>
+            <a href="#contacto" class="btn btn-primary">Me Interesa</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80" alt="Operación de Estacionamientos">
+            <div class="card-image-overlay"></div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Operación de Estacionamientos</h3>
+            <ul class="card-features">
+              <li>Gestión integral de estacionamientos de plazas comerciales</li>
+              <li>Ahorro y eficiencia en recursos administrativos</li>
+              <li>Personal capacitado y supervisado</li>
+              <li>Reportes operativos y financieros periódicos</li>
+            </ul>
+            <a href="#contacto" class="btn btn-primary">Me Interesa</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=600&q=80" alt="Soluciones Integrales">
+            <div class="card-image-overlay"></div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Soluciones Integrales de Estacionamiento</h3>
+            <ul class="card-features">
+              <li>Proyectos a la medida para hospitales y residenciales</li>
+              <li>Estacionamientos públicos y corporativos</li>
+              <li>Consultoría, diseño, instalación y puesta en marcha</li>
+              <li>Soporte continuo post-instalación</li>
+            </ul>
+            <a href="#contacto" class="btn btn-primary">Me Interesa</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=600&q=80" alt="Sistemas de CCTV">
+            <div class="card-image-overlay"></div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Instalación de Sistemas de CCTV</h3>
+            <ul class="card-features">
+              <li>Videovigilancia para todo tipo de inmuebles</li>
+              <li>Cámaras de alta definición con visión nocturna</li>
+              <li>Monitoreo remoto desde cualquier dispositivo</li>
+              <li>Almacenamiento en la nube y grabación continua</li>
+            </ul>
+            <a href="#contacto" class="btn btn-primary">Me Interesa</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1590674899484-d5640e854abe?w=600&q=80" alt="Obra Civil Vial">
+            <div class="card-image-overlay"></div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Obra Civil para Flujo Vial</h3>
+            <ul class="card-features">
+              <li>Topes, guarniciones y bolardos de protección</li>
+              <li>Ponchallantas y reductores de velocidad</li>
+              <li>Señalización vial y pintura de cajones</li>
+              <li>Diseño de circulación vehicular en estacionamientos</li>
+            </ul>
+            <a href="#contacto" class="btn btn-primary">Me Interesa</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&q=80" alt="Asesoría y Gestoría">
+            <div class="card-image-overlay"></div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Asesoría y Gestoría de Trámites</h3>
+            <ul class="card-features">
+              <li>Permisos municipales y licencias de operación</li>
+              <li>Trámites ambientales y de protección civil</li>
+              <li>Gestión ante PROFECO y autoridades de tránsito</li>
+              <li>Acompañamiento integral en el proceso regulatorio</li>
+            </ul>
+            <a href="#contacto" class="btn btn-primary">Me Interesa</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=80" alt="Soluciones a la Medida">
+            <div class="card-image-overlay"></div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Soluciones a la Medida</h3>
+            <ul class="card-features">
+              <li>Proyectos personalizados en estacionamiento y vialidad</li>
+              <li>Control de acceso y vigilancia adaptados a tu operación</li>
+              <li>Flexibilidad para resolver cualquier reto del sector</li>
+              <li>Experiencia multidisciplinaria de 26 años en campo</li>
+            </ul>
+            <a href="#contacto" class="btn btn-primary">Me Interesa</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CLIENTES ========== -->
+  <section class="section section-clients" id="clientes">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Nuestros Clientes</h2>
+        <div class="section-divider"></div>
+        <p class="section-subtitle">Empresas y desarrollos que confían en Tecnyselec para sus soluciones de estacionamiento en la región.</p>
+      </div>
+      <div class="cards-grid clients-grid">
+
+        <div class="card card-client">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1519567241046-7f570eee3ce6?w=600&q=80" alt="Plaza Río">
+            <div class="card-image-overlay"></div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Plaza Río</h3>
+            <p class="card-description">Uno de los centros comerciales más emblemáticos de Tijuana con alto flujo vehicular diario.</p>
+            <a href="#mapa" class="btn btn-outline">Ver Más</a>
+          </div>
+        </div>
+
+        <div class="card card-client">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80" alt="Península Fashion Mall">
+            <div class="card-image-overlay"></div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Península Fashion Mall</h3>
+            <p class="card-description">Centro comercial de diseño arquitectónico vanguardista en la zona Río de Tijuana.</p>
+            <a href="#mapa" class="btn btn-outline">Ver Más</a>
+          </div>
+        </div>
+
+        <div class="card card-client">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&q=80" alt="Macroplaza Insurgentes">
+            <div class="card-image-overlay"></div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Macroplaza Insurgentes</h3>
+            <p class="card-description">Plaza comercial de gran formato con amplio estacionamiento automatizado.</p>
+            <a href="#mapa" class="btn btn-outline">Ver Más</a>
+          </div>
+        </div>
+
+        <div class="card card-client">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1529074963764-98f45c47344b?w=600&q=80" alt="Aeropuerto Internacional de Tijuana">
+            <div class="card-image-overlay"></div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Aeropuerto Internacional de Tijuana</h3>
+            <p class="card-description">Sistema de estacionamiento del aeropuerto con mayor tráfico fronterizo de México.</p>
+            <a href="#mapa" class="btn btn-outline">Ver Más</a>
+          </div>
+        </div>
+
+        <div class="card card-client">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1568992687947-868a62a9f521?w=600&q=80" alt="Alameda Otay">
+            <div class="card-image-overlay"></div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Alameda Otay</h3>
+            <p class="card-description">Town center moderno en la zona de Otay con sistema de control de acceso integral.</p>
+            <a href="#mapa" class="btn btn-outline">Ver Más</a>
+          </div>
+        </div>
+
+        <div class="card card-client">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=600&q=80" alt="Paseo 2000">
+            <div class="card-image-overlay"></div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Paseo 2000</h3>
+            <p class="card-description">Centro comercial con solución de estacionamiento automatizado y cobro eficiente.</p>
+            <a href="#mapa" class="btn btn-outline">Ver Más</a>
+          </div>
+        </div>
+
+        <div class="card card-client">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&q=80" alt="Plaza Carrousel">
+            <div class="card-image-overlay"></div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Plaza Carrousel</h3>
+            <p class="card-description">Plaza comercial de referencia con sistema de barreras y cobro automatizado.</p>
+            <a href="#mapa" class="btn btn-outline">Ver Más</a>
+          </div>
+        </div>
+
+        <div class="card card-client">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1577495508048-b635879837f1?w=600&q=80" alt="Pabellón Rosarito">
+            <div class="card-image-overlay"></div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Pabellón Rosarito</h3>
+            <p class="card-description">Principal centro comercial de Playas de Rosarito con estacionamiento gestionado.</p>
+            <a href="#mapa" class="btn btn-outline">Ver Más</a>
+          </div>
+        </div>
+
+        <div class="card card-client">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1573348722427-f1d6819fdf98?w=600&q=80" alt="Plaza Pacífico">
+            <div class="card-image-overlay"></div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Plaza Pacífico</h3>
+            <p class="card-description">Centro comercial con sistema integral de control vehicular y cobro automatizado.</p>
+            <a href="#mapa" class="btn btn-outline">Ver Más</a>
+          </div>
+        </div>
+
+        <div class="card card-client">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=600&q=80" alt="Plaza San Pedro">
+            <div class="card-image-overlay"></div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Plaza San Pedro</h3>
+            <p class="card-description">Centro comercial de Mexicali con equipo de estacionamiento de alta capacidad.</p>
+            <a href="#mapa" class="btn btn-outline">Ver Más</a>
+          </div>
+        </div>
+
+        <!-- Card CTA: Ver todos en mapa -->
+        <a href="#mapa" class="card card-client card-cta">
+          <div class="card-cta-content">
+            <div class="card-cta-icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <h3 class="card-title">Ver todos nuestros clientes</h3>
+            <p class="card-description">Explora el mapa interactivo con todas las ubicaciones donde hemos trabajado.</p>
+            <span class="btn btn-outline">Ver Mapa</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== MAPA DE CLIENTES ========== -->
+  <section class="section section-map" id="mapa">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Ubicaciones de Nuestros Clientes</h2>
+        <div class="section-divider"></div>
+        <p class="section-subtitle">Conoce todas las ubicaciones donde Tecnyselec ha instalado, dado mantenimiento u operado sistemas de estacionamiento.</p>
+      </div>
+      <div class="map-wrapper">
+        <a href="https://maps.app.goo.gl/YWkEKDZQKehiGrBs9" target="_blank" rel="noopener noreferrer" class="map-card">
+          <div class="map-card-bg">
+            <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?w=1400&q=80" alt="Mapa de ubicaciones">
+            <div class="map-card-overlay"></div>
+          </div>
+          <div class="map-card-content">
+            <div class="map-card-icon">
+              <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <h3>Explora nuestras ubicaciones en el mapa</h3>
+            <p>Haz clic para ver en Google Maps todas las plazas comerciales, residenciales, hospitales y estacionamientos públicos donde hemos trabajado.</p>
+            <span class="btn btn-accent">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              Abrir Mapa en Google Maps
+            </span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACTO ========== -->
+  <section class="section section-contact" id="contacto">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Contáctanos</h2>
+        <div class="section-divider"></div>
+        <p class="section-subtitle">Completa el formulario y un asesor se pondrá en contacto contigo a la brevedad, o si lo prefieres, comunícate directamente con nosotros a través de los siguientes medios.</p>
+      </div>
+      <div class="contact-wrapper">
+        <div class="contact-info">
+          <div class="contact-info-item">
+            <div class="contact-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div>
+              <h4>Teléfono</h4>
+              <p>664 630 1792</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <h4>Correo</h4>
+              <p>administracion@tecnyselec.com</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <h4>Ubicación</h4>
+              <p>Tijuana, Baja California</p>
+            </div>
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nombre">Nombre completo</label>
+              <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" required>
+            </div>
+            <div class="form-group">
+              <label for="celular">Número de celular</label>
+              <input type="tel" id="celular" name="celular" placeholder="Ej. 664 123 4567" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="empresa">Empresa</label>
+              <input type="text" id="empresa" name="empresa" placeholder="Ej. Plaza Comercial ABC" required>
+            </div>
+            <div class="form-group">
+              <label for="correo">Correo electrónico</label>
+              <input type="email" id="correo" name="correo" placeholder="Ej. correo@empresa.com" required>
+            </div>
+          </div>
+          <div class="form-group form-group-full">
+            <label for="descripcion">Descripción del proyecto</label>
+            <textarea id="descripcion" name="descripcion" rows="5" placeholder="Cuéntanos sobre tu proyecto, ¿qué tipo de solución necesitas?" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-submit">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            Quiero que me contacten
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <img src="img/logo.png" alt="Tecnyselec Estacionamientos" class="footer-logo">
+          <p class="footer-tagline">Soluciones integrales en equipos de estacionamiento para la región fronteriza de México.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Navegación</h4>
+          <a href="#inicio">Inicio</a>
+          <a href="#servicios">Servicios</a>
+          <a href="#clientes">Clientes</a>
+          <a href="#mapa">Mapa de Clientes</a>
+          <a href="#contacto">Contacto</a>
+        </div>
+        <div class="footer-links">
+          <h4>Contacto</h4>
+          <a href="tel:6646301792">664 630 1792</a>
+          <a href="mailto:administracion@tecnyselec.com">administracion@tecnyselec.com</a>
+          <a>Tijuana, Baja California</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Tecnyselec Estacionamientos. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
