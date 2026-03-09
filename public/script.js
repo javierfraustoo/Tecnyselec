@@ -409,6 +409,21 @@ if (servicesToggle && servicesGrid) {
 }
 
 
+// ========== CLIENTS TOGGLE ==========
+const clientsToggle = document.getElementById('clientsToggle');
+const clientsGrid = document.querySelector('.clients-grid');
+if (clientsToggle && clientsGrid) {
+  const toggleText = clientsToggle.querySelector('.toggle-text');
+  clientsToggle.addEventListener('click', () => {
+    const isExpanded = clientsGrid.classList.toggle('expanded');
+    clientsToggle.classList.toggle('expanded', isExpanded);
+    if (toggleText) {
+      toggleText.textContent = isExpanded ? 'Ver menos clientes' : 'Ver todos los clientes';
+    }
+  });
+}
+
+
 // ========== GO TO TOP ==========
 const goTopBtn = document.getElementById('goTop');
 if (goTopBtn) {
@@ -563,6 +578,7 @@ function initLanguageSwitcher() {
       's5-desc': 'Planning to open or remodel a parking facility? We guide you from initial consulting, wiring design and installation, all the way to operational launch. Your project is safe with the true experts.',
       's5-btn': 'Quote your project today',
       'services-toggle-text': 'View all services',
+      'clients-toggle-text': 'View all clients',
       'services-cta': 'Request a quote for your project',
       'sec-servicios-title': 'Our Services',
       'sec-servicios-sub': 'Comprehensive parking equipment solutions for shopping centers, residential complexes and public parking facilities.',
@@ -631,6 +647,7 @@ function initLanguageSwitcher() {
       's5-desc': 'Vous pr\u00e9voyez d\u2019ouvrir ou de r\u00e9nover un stationnement ? Nous vous accompagnons du conseil initial \u00e0 la mise en service op\u00e9rationnelle. Votre projet est entre les mains des v\u00e9ritables experts.',
       's5-btn': 'Demandez un devis',
       'services-toggle-text': 'Voir tous les services',
+      'clients-toggle-text': 'Voir tous les clients',
       'services-cta': 'Demandez un devis pour votre projet',
       'sec-servicios-title': 'Nos Services',
       'sec-servicios-sub': 'Solutions compl\u00e8tes en \u00e9quipements de stationnement pour centres commerciaux, r\u00e9sidences et parkings publics.',
@@ -699,6 +716,7 @@ function initLanguageSwitcher() {
       's5-desc': 'Planeja abrir ou reformar um estacionamento? Acompanhamos voc\u00ea desde a consultoria inicial, design e instala\u00e7\u00e3o, at\u00e9 a opera\u00e7\u00e3o. Seu projeto est\u00e1 seguro com os verdadeiros especialistas.',
       's5-btn': 'Or\u00e7e seu projeto hoje',
       'services-toggle-text': 'Ver todos os servi\u00e7os',
+      'clients-toggle-text': 'Ver todos os clientes',
       'services-cta': 'Solicite um or\u00e7amento para seu projeto',
       'sec-servicios-title': 'Nossos Servi\u00e7os',
       'sec-servicios-sub': 'Solu\u00e7\u00f5es integrais em equipamentos de estacionamento para centros comerciais, residenciais e estacionamentos p\u00fablicos.',

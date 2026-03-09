@@ -647,11 +647,10 @@ img {
   animation: fadeSlideUp 0.5s ease both;
 }
 
-.services-grid.expanded .service-extra:nth-child(6) { animation-delay: 0s; }
-.services-grid.expanded .service-extra:nth-child(7) { animation-delay: 0.07s; }
-.services-grid.expanded .service-extra:nth-child(8) { animation-delay: 0.14s; }
-.services-grid.expanded .service-extra:nth-child(9) { animation-delay: 0.21s; }
-.services-grid.expanded .service-extra:nth-child(10) { animation-delay: 0.28s; }
+.services-grid.expanded .service-extra:nth-child(7) { animation-delay: 0s; }
+.services-grid.expanded .service-extra:nth-child(8) { animation-delay: 0.07s; }
+.services-grid.expanded .service-extra:nth-child(9) { animation-delay: 0.14s; }
+.services-grid.expanded .service-extra:nth-child(10) { animation-delay: 0.21s; }
 
 @keyframes fadeSlideUp {
   from {
@@ -699,6 +698,58 @@ img {
 }
 
 .btn-services-toggle.expanded .toggle-arrow {
+  transform: rotate(180deg);
+}
+
+/* ========== CLIENT CARDS: HIDE EXTRAS + TOGGLE ========== */
+.client-extra {
+  display: none;
+}
+
+.clients-grid.expanded .client-extra {
+  display: flex;
+  animation: fadeSlideUp 0.5s ease both;
+}
+
+.clients-grid.expanded .client-extra:nth-child(7) { animation-delay: 0s; }
+.clients-grid.expanded .client-extra:nth-child(8) { animation-delay: 0.07s; }
+.clients-grid.expanded .client-extra:nth-child(9) { animation-delay: 0.14s; }
+
+.clients-toggle-wrapper {
+  text-align: center;
+  margin-top: 36px;
+}
+
+.btn-clients-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 32px;
+  background: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  border-radius: var(--radius-full);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.btn-clients-toggle:hover {
+  background: var(--primary);
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(11, 31, 92, 0.3);
+}
+
+.btn-clients-toggle .toggle-arrow {
+  transition: transform 0.3s ease;
+}
+
+.btn-clients-toggle.expanded .toggle-arrow {
   transform: rotate(180deg);
 }
 
@@ -1296,6 +1347,10 @@ img {
 
 .stat-number .stat-suffix {
   font-size: 32px;
+}
+
+.stat-number .stat-suffix-full {
+  font-size: inherit;
 }
 
 .stat-label {
