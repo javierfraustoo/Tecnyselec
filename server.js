@@ -10,7 +10,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 // Parse JSON body
 app.use(express.json());
 
-// Seguridad: headers básicos
+// Seguridad: headers basicos
 app.use((req, res, next) => {
   res.setHeader('X-Content-Type-Options', 'nosniff');
   res.setHeader('X-Frame-Options', 'SAMEORIGIN');
@@ -18,11 +18,26 @@ app.use((req, res, next) => {
   next();
 });
 
-// Servir archivos estáticos desde /public
+// No cachear HTML (para que deploys se reflejen inmediato)
+app.use((req, res, next) => {
+  if (req.path === '/' || req.path.endsWith('.html')) {
+    res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
+    res.setHeader('Pragma', 'no-cache');
+    res.setHeader('Expires', '0');
+  }
+  next();
+});
+
+// Servir archivos estaticos desde /public (CSS/JS/imgs se cachean con ?v= busting)
 const isDev = process.env.NODE_ENV !== 'production';
 app.use(express.static(path.join(__dirname, 'public'), {
   maxAge: isDev ? 0 : '7d',
-  etag: true
+  etag: true,
+  setHeaders: (res, filePath) => {
+    if (filePath.endsWith('.html')) {
+      res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
+    }
+  }
 }));
 
 // API: Enviar formulario de contacto por correo
@@ -62,7 +77,7 @@ app.post('/api/contact', async (req, res) => {
                 <td style="padding: 12px 8px; border-bottom: 1px solid #e1e5eb;"><a href="mailto:${correo}">${correo}</a></td>
               </tr>
               <tr>
-                <td style="padding: 12px 8px; font-weight: bold; color: #0B1F5C; vertical-align: top;">Descripción:</td>
+                <td style="padding: 12px 8px; font-weight: bold; color: #0B1F5C; vertical-align: top;">Descripcion:</td>
                 <td style="padding: 12px 8px;">${descripcion}</td>
               </tr>
             </table>
